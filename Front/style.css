@@ -1,0 +1,144 @@
+body {
+    background-color: #111111;
+    color: white;
+    font-family: "Calibri", sans-serif;
+    margin: 0;
+}
+/* Header */
+
+.header {
+    align-items: center;
+    /*background-color: #ad15cb;*/
+    background: rgb(2,0,36);
+    background: linear-gradient(66deg, rgba(2,0,36,1) 36%, rgba(157,40,146,1) 70%, rgba(242,19,46,1) 100%, rgba(0,212,255,1) 100%);
+    /*background: linear-gradient(#000000, transparent);*/
+    display: inline-flex;
+    height: 80px;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+}
+
+.header-logo img {
+    /*margin-left: 20px;*/
+    /*margin-top: 5px;*/
+    width: 32%;
+}
+
+.nav_bar {
+    display: flex;
+    list-style: none;
+    margin-right: 10px;
+}
+
+.nav a {
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+    margin-right: 20%;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.nav a:hover {
+    font-weight: bold;
+}
+/* Best movie */
+.best {
+    background-size: cover;
+    padding: 150px 200px 180px 200px;
+    }
+.best-movie-title {
+    font-size: 45px;
+}
+
+.Button_info {
+	box-shadow:inset 0px 1px 0px 0px #f29c93;
+	background:linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
+	background-color:#fe1a00;
+	border-radius:6px;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+.Button_info:hover {
+	background:linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
+	background-color:#ce0100;
+}
+.Button_info:active {
+	position:relative;
+	top:1px;
+}
+
+
+.best-movie-description p {
+    font-style: italic;
+    line-height: 180%;
+    margin-right: 60%;
+    margin-top: 3%;
+}
+
+.best-cover img {
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+    float: right;
+    max-width: 280px;
+    min-width: 200px;
+    width: 50%;
+    margin-right: 13%;
+
+}
+
+.main-container {
+    padding: 50px;
+}
+.box {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
+}
+.box a {
+    transition: transform .3s;  
+}
+.box a:hover {
+    transition: transform .3s;
+    -ms-transform: scale(1.4);
+    -webkit-transform: scale(1.4);  
+    transform: scale(1.4);
+}
+    .box img {
+    border-radius: 2px;
+}
+
+.modal{
+    display : block;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.hiden{
+    display: none;
+}
+/*-----------------
+* FOOTER
+-----------------**/
+footer {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #fdfdfd;
+    text-align: center;
+}
