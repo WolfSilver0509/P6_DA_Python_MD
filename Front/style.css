@@ -104,10 +104,10 @@ body {
     grid-gap: 20px;
     grid-template-columns: repeat(6, minmax(100px, 1fr));
 }
-.box a {
+.box div {
     transition: transform .3s;  
 }
-.box a:hover {
+.box div:hover {
     transition: transform .3s;
     -ms-transform: scale(1.4);
     -webkit-transform: scale(1.4);  
