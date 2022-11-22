@@ -74,21 +74,97 @@ fetch(mainUrl + "?sort_by=-imdb_score")
         })
 
 
-        fetch(mainUrl + "?genre=Horror&sort_by=-imdb_score")
+// HORROR 
+
+        let bestMoviesHorror = []
+fetch(mainUrl + "?genre=Horror&sort_by=-imdb_score")
         .then(response => response.json())
         .then(data => {
             console.log(data.results);
-            data.results.forEach((movie) => {
-                let movieContainer = document.createElement("div");
-                movieContainer.classList.add("movie");
-                let movieTitle = document.createElement("h3");
-                movieTitle.textContent = movie.title;
-                let movieImage = document.createElement("img");
-                movieImage.src = movie.image_url;
-                movieContainer.appendChild(movieImage);
-                movieContainer.appendChild(movieTitle);
-                document.getElementById("horror_box_picture").appendChild(movieContainer);
-            })
-        })
+            for (let i = 1; i < data.results.length; i++) {
+                bestMoviesHorror.push(data.results[i]);
+            }
+            fetch(mainUrl + "?genre=Horror&page=2&sort_by=-imdb_score")
+                .then(response => response.json())
+                .then(data => { const begin = bestMoviesHorror.length;
+                    for (let i = begin; i < 8 ; i++) {
+                        bestMoviesHorror.push(data.results[i - begin]);
+                    }
+                    bestMoviesHorror.forEach((movie) => {
+                        console.log(movie);
+                        let movieContainer = document.createElement("div");
+                        movieContainer.classList.add("movie");
+                        let movieTitle = document.createElement("h3");
+                        movieTitle.textContent = movie.title;
+                        let movieImage = document.createElement("img");
+                        movieImage.src = movie.image_url;
+                        movieContainer.appendChild(movieImage);
+                        movieContainer.appendChild(movieTitle);
+                        document.getElementById("horror_box_picture").appendChild(movieContainer);
+                 })
+                    })
+                })
+
+//Romance 
+
+let bestMoviesRomance = []
+fetch(mainUrl + "?genre=Romance&sort_by=-imdb_score")
+        .then(response => response.json())
+        .then(data => {
+            console.log(data.results);
+            for (let i = 1; i < data.results.length; i++) {
+                bestMoviesRomance.push(data.results[i]);
+            }
+            fetch(mainUrl + "?genre=Romance&page=2&sort_by=-imdb_score")
+                .then(response => response.json())
+                .then(data => { const begin = bestMoviesRomance.length;
+                    for (let i = begin; i < 8 ; i++) {
+                        bestMoviesRomance.push(data.results[i - begin]);
+                    }
+                    bestMoviesRomance.forEach((movie) => {
+                        console.log(movie);
+                        let movieContainer = document.createElement("div");
+                        movieContainer.classList.add("movie");
+                        let movieTitle = document.createElement("h3");
+                        movieTitle.textContent = movie.title;
+                        let movieImage = document.createElement("img");
+                        movieImage.src = movie.image_url;
+                        movieContainer.appendChild(movieImage);
+                        movieContainer.appendChild(movieTitle);
+                        document.getElementById("love_box_picture").appendChild(movieContainer);
+                 })
+                    })
+                })
+
+// Anime 
+
+let bestMoviesAnime = []
+fetch(mainUrl + "?genre=Animation&sort_by=-imdb_score")
+        .then(response => response.json())
+        .then(data => {
+            console.log(data.results);
+            for (let i = 1; i < data.results.length; i++) {
+                bestMoviesAnime.push(data.results[i]);
+            }
+            fetch(mainUrl + "?genre=Animation&page=2&sort_by=-imdb_score")
+                .then(response => response.json())
+                .then(data => { const begin = bestMoviesAnime.length;
+                    for (let i = begin; i < 8 ; i++) {
+                        bestMoviesAnime.push(data.results[i - begin]);
+                    }
+                    bestMoviesAnime.forEach((movie) => {
+                        console.log(movie);
+                        let movieContainer = document.createElement("div");
+                        movieContainer.classList.add("movie");
+                        let movieTitle = document.createElement("h3");
+                        movieTitle.textContent = movie.title;
+                        let movieImage = document.createElement("img");
+                        movieImage.src = movie.image_url;
+                        movieContainer.appendChild(movieImage);
+                        movieContainer.appendChild(movieTitle);
+                        document.getElementById("anime_box_picture").appendChild(movieContainer);
+                 })
+                    })
+                })
 
         
