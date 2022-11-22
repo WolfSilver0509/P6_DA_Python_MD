@@ -133,6 +133,59 @@ body {
 .hiden{
     display: none;
 }
+
+.modal_content{
+    background : linear-gradient(0.25turn, #701179, #5429c9, #cf246c);
+    margin: auto;
+    padding: 20px;
+    border: 3px solid rgb(3, 1, 1);
+    border-radius: 30px;
+    width: 80%;
+}
+h4{
+    color:black;
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
+}
+.cover_modal{
+    width: 25%;
+    height: 45%;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: end;
+}
+.img_modal
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.fa-solid{
+    color: rgb(10, 1, 1);
+    font-size: 20px;
+    margin: 0px 10px;
+    display: flex;
+    justify-content: end;
+}
+p{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.box{
+    display: flex;
+    overflow-x: scroll;
+    margin: 1rem;
+}
+
+
 /*-----------------
 * FOOTER
 -----------------**/

@@ -37,15 +37,15 @@ fetch(mainUrl + "?sort_by=-imdb_score")
             .then(response => response.json())
             .then(data => {
                 bestMovieInfo = data;
-                document.getElementById("top-description").textContent = data.description;
+                document.getElementById("top-description").textContent = data.long_description;// a revoir ne s'affiche pas 
                 document.getElementById("title").textContent = data.title;
                 document.getElementById("description").textContent = data.description;
-                document.getElementById("genre").textContent = data.genre;
-                document.getElementById("director").textContent = data.director;
+                document.getElementById("genre").textContent = data.genres;
+                document.getElementById("director").textContent = data.directors;
                 document.getElementById("imdb_score").textContent = data.imdb_score;
                 document.getElementById("duration").textContent = data.duration;
                 document.getElementById("date_published").textContent = data.date_published;
-                document.getElementById("country").textContent = data.country;
+                document.getElementById("country").textContent = data.country;// a revoir ne s'affiche pas 
                 document.getElementById("actors").textContent = data.actors;
                 document.getElementById("image").src = data.image_url;
                 document.getElementById("year").textContent = data.year;
@@ -71,6 +71,24 @@ fetch(mainUrl + "?sort_by=-imdb_score")
         })
         document.getElementById("button_close").addEventListener("click", ()=>{
             document.getElementById("modal_box").classList.toggle("hiden");
+        })
+
+
+        fetch(mainUrl + "?genre=Horror&sort_by=-imdb_score")
+        .then(response => response.json())
+        .then(data => {
+            console.log(data.results);
+            data.results.forEach((movie) => {
+                let movieContainer = document.createElement("div");
+                movieContainer.classList.add("movie");
+                let movieTitle = document.createElement("h3");
+                movieTitle.textContent = movie.title;
+                let movieImage = document.createElement("img");
+                movieImage.src = movie.image_url;
+                movieContainer.appendChild(movieImage);
+                movieContainer.appendChild(movieTitle);
+                document.getElementById("horror_box_picture").appendChild(movieContainer);
+            })
         })
 
         
