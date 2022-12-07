@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link href="style.css" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/b92704fbb5.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/b92704fbb5.js"
+      crossorigin="anonymous"
+    ></script>
     <title>JustStreamIt</title>
   </head>
   <body>
@@ -15,178 +18,229 @@
         /></a>
       </div>
       <nav class="header_menu">
-        <ul class="nav_bar">
-          <li class="nav"><a href="index.html">Home</a></li>
-          <li class="nav"><a href="#categories">Catégories</a></li>
-        </ul>
+        <a href="index.html" class="nav">Home</a>
+        <a href="#categories" class="nav">Catégories</a>
       </nav>
     </header>
     <!-- Section du meilleur film  -->
     <section class="best" id="best-movie">
       <div class="best-cover" id="top0">
-        <img alt="movie cover" src="images/cover.PNG" />
+        <img alt="movie cover" src="" />
       </div>
       <div class="best_movie">
         <h1 class="best-movie-title" id="top-title">""</h1>
       </div>
       <div class="buttonInfo">
-        <button aria-label="open modal" class="Button_info" id="button_more_info">Info </button>
+        <button
+          aria-label="open modal"
+          class="Button_info"
+          id="button_more_info"
+        >
+          Info
+        </button>
       </div>
       <div class="best-movie-description">
         <p class="description" id="top-description">""</p>
       </div>
     </section>
-    
- 
-    
+
     <!-- Section des meilleurs films notés <i class="fa-solid fa-arrow-left"></i>  <i class="fa-solid fa-arrow-right"></i> -->
     <section class="best_items" id="items">
-      
-      <div class="location" id="home">
-        <h1 id="home">Best rank on JustStreamIt</h1>
-        
-        <div class="box" id="best_box_picture"></div>
-        
+      <div class="location" id="categories">
+        <h1>Best rank on JustStreamIt</h1>
+        <div class="contener_movie">
+          <div class="left">
+            <button class="left-button" data-box="best_box_picture">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+          </div>
+          <div class="box center" id="best_box_picture"></div>
+          <div class="right">
+            <button class="right-button" data-box="best_box_picture">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
       </div>
-      
     </section>
     <!-- Section cat Horror 1  -->
     <section class="best_items_horror" id="items_horror">
-      <div class="location" id="home">
-        <h1 id="home">Best Horror on JustStreamIt</h1>
-        <div class="box" id="horror_box_picture"></div>
+      <div class="location">
+        <h1>Best Horror on JustStreamIt</h1>
+        <div class="contener_movie">
+          <div class="left">
+            <button class="left-button" data-box="horror_box_picture">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+          </div>
+          <div class="box center" id="horror_box_picture"></div>
+          <div class="right">
+            <button class="right-button" data-box="horror_box_picture">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
     <!-- Section cat Romance 2  -->
     <section class="best_items_love" id="items_love">
-      <div class="location" id="home">
-        <h1 id="home">Best Romance on JustStreamIt</h1>
-        <div class="box" id="love_box_picture"></div>
+      <div class="location">
+        <h1>Best Romance on JustStreamIt</h1>
+        <div class="contener_movie">
+          <div class="left">
+            <button class="left-button" data-box="love_box_picture">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+          </div>
+          <div class="box center" id="love_box_picture"></div>
+          <div class="right">
+            <button class="right-button" data-box="love_box_picture">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
     <!-- Section cat  anime 3  -->
     <section class="best_items_anime" id="items_anime">
-      <div class="location" id="home">
-        <h1 id="home">Best Animation on JustStreamIt</h1>
-        <div class="box" id="anime_box_picture"></div>
+      <div class="location">
+        <h1>Best Animation on JustStreamIt</h1>
+        <div class="contener_movie">
+          <div class="left">
+            <button class="left-button" data-box="anime_box_picture">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+          </div>
+          <div class="box center" id="anime_box_picture"></div>
+          <div class="right">
+            <button class="right-button" data-box="anime_box_picture">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
     <!-- Modal Box -->
     <div id="modal_box" class="modal hiden">
       <div class="modal_content">
-          <span   id="button_close" class="bt">  <i class="fa-solid fa-rectangle-xmark"></i> </span>
-          <!-- html description  -->
-          <h3> <title id="title"> </title></h3>
-          <div class="cover_modal">
-          <img id="image" class="img_modal"> </img>
-          </div>
-          <h4>Titre :  </h4>
-          <p id="title_best"></p>
-           <h4> Description :</h4>
-            <p id="description"></p>
-            <h4> Genre :</h4>
-            <p id="genre"> </p>
-            <h4> Date Published :</h4>
-            <p id="date_published"> </p>
-            <h4>Year :</h4>
-            <p id="year"> </p>
-            <h4>Votes :</h4>
-            <p id="votes"> </p>
-            <h4> AVG VOTE :</h4>
-            <p id="avg_vote"> </p>
-            <h4> IMDB Score :</h4>
-            <p id="imdb_score"> </p>
-            <h4> Director :</h4>
-            <p id="director"> </p>
-            <h4> Actors :</h4>
-            <p id="actors"> </p>
-            <h4> Duration :</h4>
-            <p id="duration"> </p>
-            <h4> Country :</h4>
-            <p id="country"> </p>
-            <h4>Note:</h4>
-            <p id="rated"> </p>
-            <h4> L'ID' :</h4>
-            <p id="id"> </p>
-            <h4> URL :</h4>
-            <p id="url"> </p>
-            <h4> Company :</h4>
-            <p id="company"> </p>
-            <h4> Languages :</h4>
-            <p id="languages"> </p>
-            <h4> Writers :</h4>
-            <p id="writers"> </p>
-            <h4> Budget :</h4>
-            <p id="budget"> </p>
-            <h4> Budget Currency :</h4>
-            <p id="budget_currency"> </p>
-            <h4> MetaScore :</h4>
-            <p id="metascore"> </p>
+        <span id="button_close" class="bt">
+          <i class="fa-solid fa-rectangle-xmark"></i>
+        </span>
+        <!-- html description  -->
+        <h3 id="title"></h3>
+        <div class="cover_modal">
+          <img id="image" class="img_modal" />
+        </div>
+        <h4>Titre :</h4>
+        <p id="title_best"></p>
+        <h4>Description :</h4>
+        <p id="description"></p>
+        <h4>Genre :</h4>
+        <p id="genre"></p>
+        <h4>Date Published :</h4>
+        <p id="date_published"></p>
+        <h4>Year :</h4>
+        <p id="year"></p>
+        <h4>Votes :</h4>
+        <p id="votes"></p>
+        <h4>AVG VOTE :</h4>
+        <p id="avg_vote"></p>
+        <h4>IMDB Score :</h4>
+        <p id="imdb_score"></p>
+        <h4>Director :</h4>
+        <p id="director"></p>
+        <h4>Actors :</h4>
+        <p id="actors"></p>
+        <h4>Duration :</h4>
+        <p id="duration"></p>
+        <h4>Country :</h4>
+        <p id="country"></p>
+        <h4>Note:</h4>
+        <p id="rated"></p>
+        <h4>L'ID' :</h4>
+        <p id="id"></p>
+        <h4>URL :</h4>
+        <p id="url"></p>
+        <h4>Company :</h4>
+        <p id="company"></p>
+        <h4>Languages :</h4>
+        <p id="languages"></p>
+        <h4>Writers :</h4>
+        <p id="writers"></p>
+        <h4>Budget :</h4>
+        <p id="budget"></p>
+        <h4>Budget Currency :</h4>
+        <p id="budget_currency"></p>
+        <h4>MetaScore :</h4>
+        <p id="metascore"></p>
 
-
-          <div id="movie_info">movie_info</div>
+        <div id="movie_info">movie_info</div>
       </div>
     </div>
     <!-- Modal 2 -->
     <!-- Modal Box -->
     <div id="modal_box_2" class="modal hiden">
       <div class="modal_content">
-          <span   id="button_close_2" class="bt">  <i class="fa-solid fa-rectangle-xmark"></i> </span>
-          <!-- html description  -->
-          <div class="cover_modal">
-          <img id="image_2" class="img_modal"> </img>
-          </div>
-          <h4>Titre :  </h4>
-          <p id="title_2"></p>
-           <h4> Description :</h4>
-            <p id="description_2"></p>
-            <h4> Genre :</h4>
-            <p id="genre_2"> </p>
-            <h4> Date Published :</h4>
-            <p id="date_published_2"> </p>
-            <h4>Year :</h4>
-            <p id="year_2"> </p>
-            <h4>Votes :</h4>
-            <p id="votes_2"> </p>
-            <h4> AVG VOTE :</h4>
-            <p id="avg_vote_2"> </p>
-            <h4> IMDB Score :</h4>
-            <p id="imdb_score_2"> </p>
-            <h4> Director :</h4>
-            <p id="director_2"> </p>
-            <h4> Actors :</h4>
-            <p id="actors_2"> </p>
-            <h4> Duration :</h4>
-            <p id="duration_2"> </p>
-            <h4> Country :</h4>
-            <p id="country_2"> </p>
-            <h4>Note:</h4>
-            <p id="rated_2"> </p>
-            <h4> L'ID' :</h4>
-            <p id="id_2"> </p>
-            <h4> URL :</h4>
-            <p id="url_2"> </p>
-            <h4> Company :</h4>
-            <p id="company_2"> </p>
-            <h4> Languages :</h4>
-            <p id="languages_2"> </p>
-            <h4> Writers :</h4>
-            <p id="writers_2"> </p>
-            <h4> Budget :</h4>
-            <p id="budget_2"> </p>
-            <h4> Budget Currency :</h4>
-            <p id="budget_currency_2"> </p>
-            <h4> MetaScore :</h4>
-            <p id="metascore_2"> </p>
+        <span id="button_close_2" class="bt">
+          <i class="fa-solid fa-rectangle-xmark"></i>
+        </span>
+        <!-- html description  -->
+        <div class="cover_modal">
+          <img id="image_2" class="img_modal" alt="" src="" />
+        </div>
+        <h4>Titre :</h4>
+        <p id="title_2"></p>
+        <h4>Description :</h4>
+        <p id="description_2"></p>
+        <h4>Genre :</h4>
+        <p id="genre_2"></p>
+        <h4>Date Published :</h4>
+        <p id="date_published_2"></p>
+        <h4>Year :</h4>
+        <p id="year_2"></p>
+        <h4>Votes :</h4>
+        <p id="votes_2"></p>
+        <h4>AVG VOTE :</h4>
+        <p id="avg_vote_2"></p>
+        <h4>IMDB Score :</h4>
+        <p id="imdb_score_2"></p>
+        <h4>Director :</h4>
+        <p id="director_2"></p>
+        <h4>Actors :</h4>
+        <p id="actors_2"></p>
+        <h4>Duration :</h4>
+        <p id="duration_2"></p>
+        <h4>Country :</h4>
+        <p id="country_2"></p>
+        <h4>Note:</h4>
+        <p id="rated_2"></p>
+        <h4>L'ID' :</h4>
+        <p id="id_2"></p>
+        <h4>URL :</h4>
+        <p id="url_2"></p>
+        <h4>Company :</h4>
+        <p id="company_2"></p>
+        <h4>Languages :</h4>
+        <p id="languages_2"></p>
+        <h4>Writers :</h4>
+        <p id="writers_2"></p>
+        <h4>Budget :</h4>
+        <p id="budget_2"></p>
+        <h4>Budget Currency :</h4>
+        <p id="budget_currency_2"></p>
+        <h4>MetaScore :</h4>
+        <p id="metascore_2"></p>
 
-
-          <div id="movie_info_2">movie_info</div>
+        <div id="movie_info_2">movie_info</div>
       </div>
     </div>
     <!-- FOOTER -->
     <footer>
-      <p>JustStreamIt<br>
-      Projet réalisé pour le livrable numéro 6 du parcours de Développeur d'application Python chez OpenClassRooms</p>
+      <p>
+        JustStreamIt<br />
+        Projet réalisé pour le livrable numéro 6 du parcours de Développeur
+        d'application Python chez OpenClassRooms - Myriam Denizot - 2022
+      </p>
     </footer>
     <script src="script.js"></script>
   </body>
