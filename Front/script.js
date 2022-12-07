@@ -8,6 +8,7 @@ fetch(mainUrl + "?sort_by=-imdb_score")
     // debugger;
     document.getElementById("top-title").textContent = data.results[0].title;
     document.querySelector("#top0 > img").src = data.results[0].image_url;
+    document.querySelector("#top0 > img").alt = data.results[0].title;
     console.log(data.results);
     for (let i = 1; i < data.results.length; i++) {
       bestMovies.push(data.results[i]);
@@ -30,6 +31,7 @@ fetch(mainUrl + "?sort_by=-imdb_score")
           movieTitle.textContent = movie.title;
           let movieImage = document.createElement("img");
           movieImage.src = movie.image_url;
+          movieImage.alt = movie.title;
           movieContainer.appendChild(movieImage);
           movieContainer.appendChild(movieTitle);
           document
@@ -55,6 +57,7 @@ fetch(mainUrl + "?sort_by=-imdb_score")
         document.getElementById("country").textContent = data.countries; 
         document.getElementById("actors").textContent = data.actors;
         document.getElementById("image").src = data.image_url;
+        document.getElementById("image").alt = data.title;
         document.getElementById("year").textContent = data.year;
         document.getElementById("id").textContent = data.id;
         document.getElementById("rated").textContent = data.rated;
@@ -105,6 +108,7 @@ fetch(mainUrl + "?genre=Horror&sort_by=-imdb_score")
           movieTitle.textContent = movie.title;
           let movieImage = document.createElement("img");
           movieImage.src = movie.image_url;
+          movieImage.alt = movie.title;
           movieContainer.appendChild(movieImage);
           movieContainer.appendChild(movieTitle);
           document
@@ -142,6 +146,7 @@ fetch(mainUrl + "?genre=Romance&sort_by=-imdb_score")
           movieTitle.textContent = movie.title;
           let movieImage = document.createElement("img");
           movieImage.src = movie.image_url;
+          movieImage.alt = movie.title;
           movieContainer.appendChild(movieImage);
           movieContainer.appendChild(movieTitle);
           document
@@ -179,6 +184,7 @@ fetch(mainUrl + "?genre=Animation&sort_by=-imdb_score")
           movieTitle.textContent = movie.title;
           let movieImage = document.createElement("img");
           movieImage.src = movie.image_url;
+          movieImage.alt = movie.title;
           movieContainer.appendChild(movieImage);
           movieContainer.appendChild(movieTitle);
           document
@@ -205,6 +211,7 @@ displayModal = (data) => {
       document.getElementById("country_2").textContent = movie.countries; // a revoir ne s'affiche pas
       document.getElementById("actors_2").textContent = movie.actors;
       document.getElementById("image_2").src = movie.image_url;
+      document.getElementById("image_2").alt = movie.title;
       document.getElementById("year_2").textContent = movie.year;
       document.getElementById("id_2").textContent = movie.id;
       document.getElementById("rated_2").textContent = movie.rated;
@@ -223,4 +230,24 @@ displayModal = (data) => {
 
 document.getElementById("button_close_2").addEventListener("click", () => {
   document.getElementById("modal_box_2").classList.toggle("hiden");
+});
+
+
+const rightBtn = document.querySelectorAll('.right-button');
+const leftBtn = document.querySelectorAll('.left-button');
+rightBtn.forEach((btn) => {
+
+  btn.addEventListener("click", function(event) {
+    const conent = document.getElementById(btn.dataset.box);
+    conent.scrollLeft += 300;
+    event.preventDefault();
+  }); 
+});
+
+leftBtn.forEach((btn) => {
+  btn.addEventListener("click", function(event) {
+    const conent = document.getElementById(btn.dataset.box);
+    conent.scrollLeft -= 300;
+    event.preventDefault();
+  });
 });
