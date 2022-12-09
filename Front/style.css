@@ -241,7 +241,7 @@ box fleche
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 200px;
+    height: 612px;
 
    }
    .contener_movie button{
@@ -256,3 +256,10 @@ box fleche
     cursor: pointer;
    }
    
+   .box_picture{ 
+    height: 612px;
+   }
+
+   .box_picture img{ 
+    height: 500px;
+   }
