@@ -4,7 +4,7 @@
 Projet n°6 de la formation développeur d'Application Python.
 
 
-:pushpin: ## Utilisation : Voici la liste des outils utilisées pour ce projet :
+## :pushpin: Utilisation : Voici la liste des outils utilisées pour ce projet :
 
 
 #### JavaScript
@@ -16,11 +16,11 @@ Projet n°6 de la formation développeur d'Application Python.
 
 
 
-:computer: ### Python
+### :computer: Python
 Vous devez avoir Python, version 3.9 minimum, installé sur votre ordinateur (si ce n'est pas le cas vous pouvez le télécharger [ici - Python](https://www.python.org/downloads/))
 
 
-	:clapper: Ensuite téléchargez le repo version zip sur github  :
+:clapper: Ensuite téléchargez le repo version zip sur github  :
 
 
 :point_right: Créez un nouveau dossier sur votre bureau avec le nom que vous souhaitez par exemple : StreamLit
